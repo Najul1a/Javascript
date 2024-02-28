@@ -1,8 +1,8 @@
 // Atividade01
-function idade(ano1, ano2) {
-  return ano1 - ano2;
+function idade(ano1) {
+  return 2024 - ano1;
 }
-console.log(`${idade(2024, 2007)}`);
+console.log(`${idade(2007)}`);
 
 console.log("--------------------------------------");
 //Atividade2
