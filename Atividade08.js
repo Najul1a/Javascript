@@ -73,9 +73,9 @@ function extrairNumeros(str) {
 }
 
 // Exemplo de uso:
-console.log(extrairNumeros("Tenho 2 maçãs e 3 laranjas")); 
-console.log(extrairNumeros("A temperatura é 25 graus")); 
-console.log(extrairNumeros("O número de telefone é 123-456-7890")); 
+console.log(extrairNumeros("Tenho 2 primos e 3 sobrinhos")); 
+console.log(extrairNumeros("A temperatura é 6 graus")); 
+console.log(extrairNumeros("O número de telefone é 983-236-5490")); 
 
 
 function inverterOrdemPalavras(frase) {
