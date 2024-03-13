@@ -102,54 +102,91 @@
 // novoPetzinho.setNome("Rex")
 // console.log(novoPetzinho.getNome());  //"Rex"
 
+// console.log("--------------------Polimorfismo--------------------");
+// class Animal {
+//   constructor(nome) {
+//     this.nome = nome;
+//   }
 
-console.log("--------------------Polimorfismo--------------------");
-class Animal {
-  constructor(nome) {
-    this.nome = nome;
+//   fazerBarulho() {
+//     console.log("O animal faz um barulho genérico.");
+//   }
+// }
+
+// class Cachorro extends Animal {
+//   constructor(nome) {
+//     super(nome);
+//   }
+
+//   fazerBarulho() {
+//     console.log("O cachorro late!");
+//   }
+// }
+
+// class Gato extends Animal {
+//   constructor(nome) {
+//     super(nome);
+//   }
+
+//   fazerBarulho() {
+//     console.log("O gato mia!");
+//   }
+// }
+
+// // Exemplo de uso
+// const animais = [
+//   new Cachorro("Rex"),
+//   new Gato("Mia"),
+//   new Animal("Bob"), // Animal genérico
+// ];
+
+// for (const animal of animais) {
+//   animal.fazerBarulho();
+// }
+
+console.log("--------------------exemplo-------------------------");
+//Criando uma classe retângulo
+
+class Retangulo {
+  constructor(comprimento, largura) {
+    this.comprimento = comprimento;
+    this.largura = largura;
+  }
+  obterperimetro() {
+     return this.comprimento * 2 + this.largura * 2;
   }
 
-
-  fazerBarulho() {
-    console.log("O animal faz um barulho genérico.");
+  obterArea() {
+    return this.comprimento * this.largura;
+  }
+  setComprimento(novocomprimento) {
+    this.novocomprimento = novocomprimento;
+  }
+  setLargura(novalargura) {
+    this.novalargura = novalargura;
   }
 }
 
+//Criando um objeto do "tipo" Retângulo
+var ret1 = new Retangulo(10, 15);
 
-class Cachorro extends Animal {
-  constructor(nome) {
-    super(nome);
-  }
-
-
-  fazerBarulho() {
-    console.log("O cachorro late!");
-  }
+function displayRet(retangulo) {
+  console.table(retangulo);
+  console.log(`comprimento = ${retangulo.comprimento}`);
+  console.log(`largura = ${retangulo.largura}`);
+  console.log(`área = ${retangulo.obterArea()}`);
+  console.log(`perimetro = ${retangulo.obterperimetro()}`);
 }
+displayRet(ret1);
+ret1.setComprimento(20);
+displayRet(ret1);
+ret1.setLargura(20);
+displayRet(ret1);
 
 
-class Gato extends Animal {
-  constructor(nome) {
-    super(nome);
-  }
 
-
-  fazerBarulho() {
-    console.log("O gato mia!");
-  }
-}
-
-
-// Exemplo de uso
-const animais = [
-  new Cachorro("Rex"),
-  new Gato("Mia"),
-  new Animal("Bob"), // Animal genérico
-];
-
-
-for (const animal of animais) {
-  animal.fazerBarulho();
-}
-
-
+//Crie e ultilize uma classe "sorvete" contendo as propriedades: sabor, preço e tamanho (P| M| G)
+ //Crie um sorvete morango grande 
+ //Crie um sorvete de chocolate pequeno
+ //Crie um sorvete de melancia medio
+ //altere o preco do sorvete de morango grande para R$10,51
